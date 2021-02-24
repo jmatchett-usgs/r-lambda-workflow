@@ -16,5 +16,5 @@ do
     OUT="error"
   fi
 
-  curl -s -X POST "http://${AWS_LAMBDA_RUNTIME_API}/2018-06-01/runtime/invocation/$REQUEST_ID/$OUT" -d "$RESPONSE"
+  curl -sS -X POST "http://${AWS_LAMBDA_RUNTIME_API}/2018-06-01/runtime/invocation/$REQUEST_ID/$OUT" -d "$RESPONSE"
 done
